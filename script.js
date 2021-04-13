@@ -1,5 +1,4 @@
-//alert("Bla bla bla",1);
-/* Задание на урок:
+/*  Задание на урок1:
 1) Создать переменную numberOfFilms и в неё поместить ответ от пользователя на вопрос:
 'Сколько фильмов вы уже посмотрели?'
 2) Создать объект personalMovieDB и в него поместить такие свойства:
@@ -12,17 +11,8 @@
     - 'Один из последних просмотренных фильмов?'
     - 'На сколько оцените его?'
 Ответы стоит поместить в отдельные переменные
-Записать ответы в объект movies в формате: 
-    movies: {
-        'logan': '8.1'
-    }
-
-*/
-
-
-
-
-/* Задание на урок:
+Записать ответы в объект movies в формате: movies: { 'logan': '8.1' }
+    Задание на урок2:
 1) Автоматизировать вопросы пользователю про фильмы при помощи цикла
 2) Сделать так, чтобы пользователь не мог оставить ответ в виде пустой строки,
 отменить ответ или ввести название фильма длинее, чем 50 символов. Если это происходит - 
@@ -60,12 +50,12 @@ const personalMovieDB = {
 
 personalMovieDB.count = +numberOfFilms;
 
-let n;
-let m;
 for (let i=0; i<2; ) {
+    let n;
+    let m;   
     while (true){
         n = prompt('Один из последних просмотренных фильмов?', 'Logan');
-        if (n===null) {alert("Cancel answer!"); continue;}
+        if (n===null) {alert("Cancel answer!"); console.log('errr'); continue;}
         else{
             if (n.length < 1 ) {alert("Empty answer!"); continue;}
             else{
@@ -98,7 +88,7 @@ console.log(personalMovieDB);
 
 if (personalMovieDB.count < 10)          { alert("Просмотрено довольно мало фильмов");}
 else { 
-    if (10 < personalMovieDB.count && personalMovieDB.count < 30) { alert("Вы классический зритель");}
+    if (10 <= personalMovieDB.count && personalMovieDB.count <= 30) { alert("Вы классический зритель");}
     else {
         if (personalMovieDB.count > 30)  { alert("Вы киноман");}
         else { alert("Произошла ошибка");}
@@ -107,7 +97,6 @@ else {
 
 
 /*
-
 if (256) {
     console.log("yes");
 }
@@ -118,8 +107,5 @@ console.log('first');
 
 const a = 12;
 (a === 12) ? console.log('first') : console.log('second');
-
-
-
 */
 
